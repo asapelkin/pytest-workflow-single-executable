@@ -1,0 +1,8 @@
+- name: regex tests
+  command: echo Hello, world
+  stdout:
+    contains_regex:                  # A list of regex patterns that should be in stdout (optional)
+      - '^Hello.*'                   # This will fail, since there is a comma after Hello, not a space
+
+    must_not_contain_regex:          # A list of regex patterns that should not be in stdout (optional)
+      - 'Bye'                      # This will fail, since the regex matches Hello, world

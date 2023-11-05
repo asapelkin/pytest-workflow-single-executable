@@ -1,0 +1,11 @@
+- name: simple echo                  # A second workflow. Notice the starting `-` which means
+  command: "echo moo"                # that workflow items are in a list. You can add as much workflows as you want
+  files:
+    - path: "moo.txt"
+      should_exist: false            # Whether a file should be there or not. (optional, if not given defaults to true)
+  stdout:                            # Options for testing stdout (optional)
+    contains:                        # List of strings which should be in stdout (optional)
+      - "moo"
+    must_not_contain:                # List of strings that should NOT be in stout (optional)
+      - "Cock a doodle doo"
+    encoding: ASCII                  # Encoding for stdout (optional). Defaults to system locale.
