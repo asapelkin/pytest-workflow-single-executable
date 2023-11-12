@@ -53,4 +53,5 @@ test-resources/test-regexp.yaml ...
 ## Portability
 The resulting binary is generally portable in the sense that it is self-contained and does not have any dependencies.
 
-That said, keep in mind that you should run this build in a special environment (against an older version of glibc) to make the resulting binary fully portable across different Linux distributions. A good idea would be to use [one of the manylinux containers](https://github.com/pypa/manylinux) as the build environment.
+That said, keep in mind that you should run this build in a special environment (against an older version of glibc) to make the resulting binary fully portable across different Linux distributions. A good idea would be to use [one of the manylinux containers](https://github.com/pypa/manylinux) as the build environment and [with this python distribution](https://github.com/indygreg/python-build-standalone) . Some scripts and more info on this topic you can find [here](https://github.com/asapelkin/overpackaged). 
+
